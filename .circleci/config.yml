@@ -66,6 +66,11 @@ jobs:
             - vendor/bundle
 
       - run:
+          name: manage sdkmanager
+          command: |
+            sdkmanager --update && yes | sdkmanager --licenses
+
+      - run:
           name: fastlane tests
           command: |
             mkdir -p test-results/fastlane
