@@ -68,7 +68,7 @@ jobs:
       - run:
           name: manage sdkmanager
           command: |
-            sdkmanager --update && yes | sdkmanager --licenses
+            sdkmanager --licenses
 
       - run:
           name: fastlane tests
