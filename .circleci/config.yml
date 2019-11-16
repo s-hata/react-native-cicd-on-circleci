@@ -84,9 +84,14 @@ jobs:
             mv fastlane/report.xml test-results/fastlane
 
       - run:
-          name: build
+          name: dependencies
           command: |
             bundle install
+
+      - run:
+          name: build
+          command: |
+            bundle exec fastlane deploy
 
       - store_test_results:
           path: test-results
