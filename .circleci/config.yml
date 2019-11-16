@@ -91,7 +91,7 @@ jobs:
       - run:
           name: build
           command: |
-            bundle exec fastlane deploy
+            bundle exec fastlane beta
 
       - store_test_results:
           path: test-results
